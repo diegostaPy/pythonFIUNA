@@ -1,0 +1,21 @@
+id_camion,tipo,capacidad_teorica,eficiencia_base
+Vol-01,Volquete Pequeño,8,0.8748357
+Vol-02,Volquete Pequeño,8,0.8430868
+Vol-03,Volquete Pequeño,8,0.8823844
+Vol-04,Volquete Pequeño,8,0.9261515
+Vol-05,Volquete Pequeño,8,0.83829236
+Vol-06,Volquete Mediano,12,0.7882931
+Vol-07,Volquete Mediano,12,0.87896067
+Vol-08,Volquete Mediano,12,0.83837175
+Vol-09,Volquete Mediano,12,0.7765263
+Vol-10,Volquete Mediano,12,0.827128
+Vol-11,Volquete Grande,16,0.7268291
+Vol-12,Volquete Grande,16,0.72671354
+Vol-13,Volquete Grande,16,0.76209813
+Vol-14,Volquete Grande,16,0.654336
+Vol-15,Volquete Grande,16,0.6637541
+Art-16,Articulado,20,0.6718856
+Art-17,Articulado,20,0.64935845
+Art-18,Articulado,20,0.71571237
+Art-19,Articulado,20,0.6545988
+Art-20,Articulado,20,0.6293848

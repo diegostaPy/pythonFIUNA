@@ -1,0 +1,6 @@
+manzana
+banana
+aguacate
+naranja
+uva
+pera

@@ -6,7 +6,7 @@ print(numeros_aleatorios)
 # Crear el histograma
 fig, ax = plt.subplots()  
 
-plt.hist(numeros_aleatorios, bins=10, color='skyblue', edgecolor='black')
+plt.hist(numeros_aleatorios, bins=(0,50,100), color='skyblue', edgecolor='black')
 # Agregar etiquetas y título
 plt.xlabel('Valor')
 plt.ylabel('Frecuencia')

@@ -7,7 +7,7 @@ y1 = np.sin(x)
 y2 = np.cos(x)
 
 # Crear el gráfico de líneas con diferentes estilos
-plt.plot(x, y1, color='blue', linestyle='-', linewidth=2, label='Sen(x)')  # Línea sólida azul
+plt.plot(x, y1, color='blue', linestyle=':', linewidth=2, label='Sen(x)')  # Línea sólida azul
 plt.plot(x, y2, color='red', linestyle='--', linewidth=2, label='Cos(x)')  # Línea discontinua roja
 
 # Agregar marcadores a algunos puntos

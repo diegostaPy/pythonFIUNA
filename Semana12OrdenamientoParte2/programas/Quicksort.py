@@ -1,37 +1,52 @@
-import random
+# Esta implementación utiliza el pivote como el último elemento en la lista nums
+# Tiene un puntero para realizar un seguimiento de los elementos más pequeños que el pivote
+# Al final de la función partition(), el puntero se intercambia con el pivote
+# para obtener una lista "ordenada" en relación al pivote
+import matplotlib.pyplot as plt
 
-def particion(A,p,r):
-    '''
-    Función que realiza la partición, tomando el primer elemento del bloque [p,r] como pivot
-    '''
-    x=A[r]
-    i=p-1
-    for j in range(p,r):
-        if A[j]<=x:
-            i+=1
-            A[i],A[j] = A[j],A[i]
-    A[i+1],A[r] = A[r],A[i+1]
-    return i+1
+# Función para encontrar la posición de partición
+def particion(lista, bajo, alto):
 
-def quicksortRec(A,p,r):
-    '''
-    Función recursiva que realiza el MergeSort de A desde p hasta r
-    '''
-    if p<r:
-        q=particion(A,p,r)
-        quicksortRec(A,p,q-1)
-        quicksortRec(A,q+1,r)
+    # elegir el elemento más a la derecha como pivote, esto se puede cambiar
+    pivote = lista[alto]
 
-def quickSort(A):
-    '''
-    Para la primera llamada a la función recursiva
-    '''
-    quicksortRec(A,0,len(A)-1)
+    # puntero para el elemento mayor
+    i = bajo - 1
+    # recorrer todos los elementos
+    # comparar cada elemento con el pivote
+    for j in range(bajo, alto):
+        if lista[j] <= pivote:
+            # Si se encuentra un elemento menor que el pivote
+            # intercambiarlo con el elemento mayor señalado por i
+            i = i + 1
+            # Intercambiar el elemento en i con el elemento en j
+            (lista[i], lista[j]) = (lista[j], lista[i])
+    # Intercambiar el elemento del pivote con el elemento mayor especificado por i
+    (lista[i + 1], lista[alto]) = (lista[alto], lista[i + 1])
+    # Devolver la posición desde donde se hace la partición
+    return i + 1
 
-N=10 #cantidad de elementos a considerar
-lista=[]
-for i in range(N):
-    lista.append(random.randint(1,N)) #generamos valores aleatorios entre 1 y N
-print("Lista antes del ordenamiento:",lista)
-quickSort(lista)
-print("Lista luego del ordenamiento:",lista)
+# función para realizar quicksort
+def quickSort(lista, bajo, alto):
+    if bajo < alto:
+        # Encontrar el elemento pivote de tal manera que
+        # los elementos menores que el pivote estén a la izquierda
+        # los elementos mayores que el pivote estén a la derecha
+        pi = particion(lista, bajo, alto)
+        # Llamada recursiva en la parte izquierda del pivote
+        quickSort(lista, bajo, pi - 1)
+        # Llamada recursiva en la parte derecha del pivote
+        quickSort(lista, pi + 1, alto)
+     
+
+datos = [1, 7, 4, 1, 10, 9, -2]
+print("Lista desordenada:")
+print(datos)
+
+tamano = len(datos)
+
+quickSort(datos, 0, tamano - 1)
+
+print('Lista ordenada en orden ascendente:')
+print(datos)
+

@@ -35,7 +35,7 @@ for i in range(100, 1100, 100):
 
 # Generar listas con diferentes características
 listas = []
-tamanos = [100, 500, 1000]
+tamanos = [100, 500, 1000,100000]
 for tam in tamanos:
     lista_ordenada = list(range(1, tam+1))  # Lista ordenada
     lista_reversa = list(range(tam, 0, -1))  # Lista en orden inverso

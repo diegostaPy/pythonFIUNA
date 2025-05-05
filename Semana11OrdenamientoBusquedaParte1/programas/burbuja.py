@@ -5,7 +5,7 @@ def ordenar_vec_burbuja(A):
             if A[j] > A[j + 1]:
                 # Intercambiar A[j] y A[j+1]
                 A[j], A[j + 1] = A[j + 1], A[j]
-
+        print(A)
 # Ejemplo de uso
 A = [64, 34, 25, 12, 22, 11, 90]
 ordenar_vec_burbuja(A)

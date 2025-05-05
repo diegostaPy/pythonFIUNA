@@ -14,6 +14,9 @@ def busqueda_secuencial(arr, x):
 # Ejemplo de uso
 lista = [3, 6, 2, 8, 1, 9, 5]
 elemento_a_buscar = 8
+
+if elemento_a_buscar  in lista:
+    print(lista.index(elemento_a_buscar))
 resultado = busqueda_secuencial(lista, elemento_a_buscar)
 if resultado != -1:
     print(f"El elemento {elemento_a_buscar} está presente en el índice {resultado}.")

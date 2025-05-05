@@ -115,8 +115,8 @@ El proceso es el siguiente:
     - Cada uno de estos vectores se ordena mediante cada método de ordenamiento, contando el tiempo respectivo.
     - Se muestran al final los tiempos totales de ejecucion para cada método.
 '''
-tam=100
-N=50
+tam=500
+N=10
 
 #Inicializacion de acumuladores
 tSel=0
@@ -124,7 +124,7 @@ tIns=0
 tBur=0
 tMer=0
 tQui=0
-
+tpython=0
 #Impresion de datos de la prueba
 print("Comparacion de metodos de ordenamiento\n")
 print("Datos:")
@@ -139,7 +139,7 @@ for k in range(N):
     #Se genera un vector de manera aleatoria
     for i in range(tam):
         A.append(random.randint(1,1000))
-    
+
     #Método de selección
     #Se copian los elementos de A a B, para que todos los metodos utilicen el mismo vector
     B = A[:]
@@ -175,7 +175,12 @@ for k in range(N):
     ordenamiento_QuickSort(B)
     fin = time.time()
     tQui+=(fin-inicio)
-
+    #Método python
+    B = A[:]
+    inicio = time.time()
+    B.sort()
+    fin = time.time()
+    tpython+=(fin-inicio)
 #Impresión de resultados
 print("\n\nResultados - Tiempos totales de ejecución:")
 print("Selección:",tSel)
@@ -183,4 +188,6 @@ print("Inserción:",tIns)
 print("Burbuja:",tBur)
 print("Mergesort:",tMer)
 print("Quicksort:",tQui)
+
+print("python:",tpython)
 

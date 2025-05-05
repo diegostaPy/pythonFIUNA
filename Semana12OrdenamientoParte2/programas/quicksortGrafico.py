@@ -38,8 +38,7 @@ def quickSort(lista, bajo, alto,steps):
         quickSort(lista, bajo, pi - 1,steps)
         # Llamada recursiva en la parte derecha del pivote
         quickSort(lista, pi + 1, alto,steps)
-        return steps
-
+    
 datos = [1, 7, 4, 1, 10, 9,11,12 -2]
 print("Lista desordenada:")
 print(datos)
@@ -64,7 +63,7 @@ for i, step in enumerate(steps):
     plt.ylabel('Valor')
     plt.xticks(range(len(step)), [str(x) for x in step])
     plt.ylim(0, 100)
-    plt.pause(1)  # Pausa para una mejor visualización
+    plt.pause(3)  # Pausa para una mejor visualización
     plt.draw()
 
 # Mostrar el gráfico final

@@ -116,7 +116,7 @@ El proceso es el siguiente:
     - Se muestran al final los tiempos totales de ejecucion para cada método.
 '''
 tam=500
-N=10
+N=20
 
 #Inicializacion de acumuladores
 tSel=0

@@ -41,7 +41,8 @@ areas = []
 for N in N_values:
     area = integral_montecarlo(a, b, N)
     areas.append(area)
-    print(f"Área estimada con N={N}: {area}")
+
+print(f"Áreas estimadas con N={N_values}: {areas}")
 graficar()
 
 
